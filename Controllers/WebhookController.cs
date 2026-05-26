@@ -70,7 +70,7 @@ public class WhatsAppWebhookController : ControllerBase
         }
 
         _logger.LogInformation("No match for tenant {TenantId}, returning fallback", tenant.Id);
-        return Ok(new WebhookResponse(true, null, _matcher.GetFallbackMessage()));
+        return Ok(new WebhookResponse(true, null, null));
     }
 
     /// <summary>

@@ -98,6 +98,6 @@ public class QnAController : ControllerBase
         if (match != null)
             return Ok(new ChatPreviewResponse(match.Answer, true));
 
-        return Ok(new ChatPreviewResponse(_matcher.GetFallbackMessage(), false));
+        return Ok(new ChatPreviewResponse(null, false));
     }
 }

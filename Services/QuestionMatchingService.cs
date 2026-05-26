@@ -5,7 +5,7 @@ namespace ChatbotApi.Services;
 public interface IQuestionMatchingService
 {
     (QnAPair? Match, double Score) FindBestMatch(string userQuestion, IEnumerable<QnAPair> qnaPairs);
-    string GetFallbackMessage();
+    //string GetFallbackMessage();
 }
 
 public class QuestionMatchingService : IQuestionMatchingService
@@ -45,8 +45,8 @@ public class QuestionMatchingService : IQuestionMatchingService
         return bestScore >= 0.2 ? (bestMatch, bestScore) : (null, bestScore);
     }
 
-    public string GetFallbackMessage() =>
-        "I'm sorry, I don't understand your question. Please contact our support team for assistance.";
+    //public string GetFallbackMessage() =>
+    //    "I'm sorry, I don't understand your question. Please contact our support team for assistance.";
 
     private double CalculateScore(string rawQuestion, HashSet<string> questionTokens, string storedQuestion)
     {
