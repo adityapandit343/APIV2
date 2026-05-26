@@ -3,16 +3,20 @@
   "WorkspaceRootPath": "D:\\13-12\\whatsapp-chatbot-blueprint\\whatsapp-chatbot\\backend\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{E820EDFF-16D3-4C11-88B4-B47D00A512AC}|ChatbotApi.csproj|d:\\13-12\\whatsapp-chatbot-blueprint\\whatsapp-chatbot\\backend\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{E820EDFF-16D3-4C11-88B4-B47D00A512AC}|ChatbotApi.csproj|solutionrelative:appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{E820EDFF-16D3-4C11-88B4-B47D00A512AC}|ChatbotApi.csproj|d:\\13-12\\whatsapp-chatbot-blueprint\\whatsapp-chatbot\\backend\\services\\whatsappbridgeservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{E820EDFF-16D3-4C11-88B4-B47D00A512AC}|ChatbotApi.csproj|solutionrelative:services\\whatsappbridgeservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E820EDFF-16D3-4C11-88B4-B47D00A512AC}|ChatbotApi.csproj|d:\\13-12\\whatsapp-chatbot-blueprint\\whatsapp-chatbot\\backend\\controllers\\tenantscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E820EDFF-16D3-4C11-88B4-B47D00A512AC}|ChatbotApi.csproj|solutionrelative:controllers\\tenantscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{E820EDFF-16D3-4C11-88B4-B47D00A512AC}|ChatbotApi.csproj|d:\\13-12\\whatsapp-chatbot-blueprint\\whatsapp-chatbot\\backend\\controllers\\qnacontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E820EDFF-16D3-4C11-88B4-B47D00A512AC}|ChatbotApi.csproj|solutionrelative:controllers\\qnacontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E820EDFF-16D3-4C11-88B4-B47D00A512AC}|ChatbotApi.csproj|d:\\13-12\\whatsapp-chatbot-blueprint\\whatsapp-chatbot\\backend\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{E820EDFF-16D3-4C11-88B4-B47D00A512AC}|ChatbotApi.csproj|solutionrelative:appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+      "AbsoluteMoniker": "D:0:0:{E820EDFF-16D3-4C11-88B4-B47D00A512AC}|ChatbotApi.csproj|d:\\13-12\\whatsapp-chatbot-blueprint\\whatsapp-chatbot\\backend\\controllers\\tenantscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E820EDFF-16D3-4C11-88B4-B47D00A512AC}|ChatbotApi.csproj|solutionrelative:controllers\\tenantscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{E820EDFF-16D3-4C11-88B4-B47D00A512AC}|ChatbotApi.csproj|d:\\13-12\\whatsapp-chatbot-blueprint\\whatsapp-chatbot\\backend\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -29,10 +33,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{E820EDFF-16D3-4C11-88B4-B47D00A512AC}|ChatbotApi.csproj|d:\\13-12\\whatsapp-chatbot-blueprint\\whatsapp-chatbot\\backend\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{E820EDFF-16D3-4C11-88B4-B47D00A512AC}|ChatbotApi.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E820EDFF-16D3-4C11-88B4-B47D00A512AC}|ChatbotApi.csproj|d:\\13-12\\whatsapp-chatbot-blueprint\\whatsapp-chatbot\\backend\\controllers\\qnacontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E820EDFF-16D3-4C11-88B4-B47D00A512AC}|ChatbotApi.csproj|solutionrelative:controllers\\qnacontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -42,7 +42,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 8,
+          "SelectedChildIndex": 10,
           "Children": [
             {
               "$type": "Bookmark",
@@ -70,7 +70,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
               "Title": "AuthController.cs",
               "DocumentMoniker": "D:\\13-12\\whatsapp-chatbot-blueprint\\whatsapp-chatbot\\backend\\Controllers\\AuthController.cs",
               "RelativeDocumentMoniker": "Controllers\\AuthController.cs",
@@ -82,7 +82,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 2,
               "Title": "QnAController.cs",
               "DocumentMoniker": "D:\\13-12\\whatsapp-chatbot-blueprint\\whatsapp-chatbot\\backend\\Controllers\\QnAController.cs",
               "RelativeDocumentMoniker": "Controllers\\QnAController.cs",
@@ -90,24 +90,25 @@
               "RelativeToolTip": "Controllers\\QnAController.cs",
               "ViewState": "AgIAAEEAAAAAAAAAAAAswAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-26T13:11:31.045Z"
+              "WhenOpened": "2026-05-26T13:11:31.045Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "WhatsAppBridgeService.cs",
               "DocumentMoniker": "D:\\13-12\\whatsapp-chatbot-blueprint\\whatsapp-chatbot\\backend\\Services\\WhatsAppBridgeService.cs",
               "RelativeDocumentMoniker": "Services\\WhatsAppBridgeService.cs",
               "ToolTip": "D:\\13-12\\whatsapp-chatbot-blueprint\\whatsapp-chatbot\\backend\\Services\\WhatsAppBridgeService.cs",
               "RelativeToolTip": "Services\\WhatsAppBridgeService.cs",
-              "ViewState": "AgIAAEsAAAAAAAAAAAAuwHgAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAABoAAAAAAAAAAAA6wB4AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-05-26T12:48:44.187Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 5,
               "Title": "WebhookController.cs",
               "DocumentMoniker": "D:\\13-12\\whatsapp-chatbot-blueprint\\whatsapp-chatbot\\backend\\Controllers\\WebhookController.cs",
               "RelativeDocumentMoniker": "Controllers\\WebhookController.cs",
@@ -119,7 +120,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 0,
               "Title": "appsettings.json",
               "DocumentMoniker": "D:\\13-12\\whatsapp-chatbot-blueprint\\whatsapp-chatbot\\backend\\appsettings.json",
               "RelativeDocumentMoniker": "appsettings.json",
@@ -132,7 +133,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 7,
               "Title": "Program.cs",
               "DocumentMoniker": "D:\\13-12\\whatsapp-chatbot-blueprint\\whatsapp-chatbot\\backend\\Program.cs",
               "RelativeDocumentMoniker": "Program.cs",
@@ -144,7 +145,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 3,
               "Title": "TenantsController.cs",
               "DocumentMoniker": "D:\\13-12\\whatsapp-chatbot-blueprint\\whatsapp-chatbot\\backend\\Controllers\\TenantsController.cs",
               "RelativeDocumentMoniker": "Controllers\\TenantsController.cs",
@@ -152,12 +153,11 @@
               "RelativeToolTip": "Controllers\\TenantsController.cs",
               "ViewState": "AgIAADUAAAAAAAAAAAAgwE4AAAA8AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-26T11:55:08.853Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-05-26T11:55:08.853Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 6,
               "Title": "QuestionMatchingService.cs",
               "DocumentMoniker": "D:\\13-12\\whatsapp-chatbot-blueprint\\whatsapp-chatbot\\backend\\Services\\QuestionMatchingService.cs",
               "RelativeDocumentMoniker": "Services\\QuestionMatchingService.cs",
