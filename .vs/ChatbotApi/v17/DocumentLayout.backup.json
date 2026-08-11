@@ -3,6 +3,10 @@
   "WorkspaceRootPath": "D:\\WhatsappBot\\APIV2\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{E820EDFF-16D3-4C11-88B4-B47D00A512AC}|ChatbotApi.csproj|d:\\whatsappbot\\apiv2\\dtos\\dtos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E820EDFF-16D3-4C11-88B4-B47D00A512AC}|ChatbotApi.csproj|solutionrelative:dtos\\dtos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{E820EDFF-16D3-4C11-88B4-B47D00A512AC}|ChatbotApi.csproj|d:\\whatsappbot\\apiv2\\controllers\\oauthcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{E820EDFF-16D3-4C11-88B4-B47D00A512AC}|ChatbotApi.csproj|solutionrelative:controllers\\oauthcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -31,10 +35,6 @@
       "RelativeMoniker": "D:0:0:{E820EDFF-16D3-4C11-88B4-B47D00A512AC}|ChatbotApi.csproj|solutionrelative:data\\appdbcontextfactory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\WhatsappBot\\APIV2\\Migrations\\20260811114306_init.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Migrations\\20260811114306_init.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{E820EDFF-16D3-4C11-88B4-B47D00A512AC}|ChatbotApi.csproj|d:\\whatsappbot\\apiv2\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
       "RelativeMoniker": "D:0:0:{E820EDFF-16D3-4C11-88B4-B47D00A512AC}|ChatbotApi.csproj|solutionrelative:properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
@@ -45,6 +45,10 @@
     {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\WhatsappBot\\APIV2\\Migrations\\20260811113731_init.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Migrations\\20260811113731_init.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E820EDFF-16D3-4C11-88B4-B47D00A512AC}|ChatbotApi.csproj|d:\\whatsappbot\\apiv2\\migrations\\20260811114306_init.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E820EDFF-16D3-4C11-88B4-B47D00A512AC}|ChatbotApi.csproj|solutionrelative:migrations\\20260811114306_init.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -54,8 +58,21 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 9,
+          "SelectedChildIndex": 0,
           "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Dtos.cs",
+              "DocumentMoniker": "D:\\WhatsappBot\\APIV2\\DTOs\\Dtos.cs",
+              "RelativeDocumentMoniker": "DTOs\\Dtos.cs",
+              "ToolTip": "D:\\WhatsappBot\\APIV2\\DTOs\\Dtos.cs",
+              "RelativeToolTip": "DTOs\\Dtos.cs",
+              "ViewState": "AgIAACYAAAAAAAAAAAAgwEgAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-11T14:14:08.95Z",
+              "EditorCaption": ""
+            },
             {
               "$type": "Bookmark",
               "Name": "ST:1448495824:0:{83107a3e-496a-485e-b455-16ddb978e55e}"
@@ -82,7 +99,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "MetaOAuthService.cs",
               "DocumentMoniker": "D:\\WhatsappBot\\APIV2\\Services\\MetaOAuthService.cs",
               "RelativeDocumentMoniker": "Services\\MetaOAuthService.cs",
@@ -90,12 +107,11 @@
               "RelativeToolTip": "Services\\MetaOAuthService.cs",
               "ViewState": "AgIAAJAAAAAAAAAAAAAQwL8AAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-08-11T13:56:09.274Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-08-11T13:56:09.274Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 5,
               "Title": "WebhookController.cs",
               "DocumentMoniker": "D:\\WhatsappBot\\APIV2\\Controllers\\WebhookController.cs",
               "RelativeDocumentMoniker": "Controllers\\WebhookController.cs",
@@ -103,12 +119,11 @@
               "RelativeToolTip": "Controllers\\WebhookController.cs",
               "ViewState": "AgIAAJQAAAAAAAAAAAAkwAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-08-11T12:45:39.216Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-08-11T12:45:39.216Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 6,
               "Title": "QnAController.cs",
               "DocumentMoniker": "D:\\WhatsappBot\\APIV2\\Controllers\\QnAController.cs",
               "RelativeDocumentMoniker": "Controllers\\QnAController.cs",
@@ -116,25 +131,24 @@
               "RelativeToolTip": "Controllers\\QnAController.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-08-11T12:45:37.453Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-08-11T12:45:37.453Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "OAuthController.cs",
               "DocumentMoniker": "D:\\WhatsappBot\\APIV2\\Controllers\\OAuthController.cs",
               "RelativeDocumentMoniker": "Controllers\\OAuthController.cs",
               "ToolTip": "D:\\WhatsappBot\\APIV2\\Controllers\\OAuthController.cs",
               "RelativeToolTip": "Controllers\\OAuthController.cs",
-              "ViewState": "AgIAADAAAAAAAAAAAAAYwAoAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAABgAAAAAAAAAAAAAACQAAAAoAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-08-11T12:45:31.036Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "AuthController.cs",
               "DocumentMoniker": "D:\\WhatsappBot\\APIV2\\Controllers\\AuthController.cs",
               "RelativeDocumentMoniker": "Controllers\\AuthController.cs",
@@ -142,12 +156,11 @@
               "RelativeToolTip": "Controllers\\AuthController.cs",
               "ViewState": "AgIAABEAAAAAAAAAAAAAwAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-08-11T12:45:22.173Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-08-11T12:45:22.173Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 11,
               "Title": "20260811114306_init.cs",
               "DocumentMoniker": "D:\\WhatsappBot\\APIV2\\Migrations\\20260811114306_init.cs",
               "RelativeDocumentMoniker": "Migrations\\20260811114306_init.cs",
@@ -155,8 +168,7 @@
               "RelativeToolTip": "Migrations\\20260811114306_init.cs",
               "ViewState": "AgIAABYAAAAAAAAAAAAQwAwAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-08-11T11:43:07.083Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-08-11T11:43:07.083Z"
             },
             {
               "$type": "Document",
@@ -168,12 +180,11 @@
               "RelativeToolTip": "Properties\\launchSettings.json",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAWAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2026-08-11T11:41:57.709Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-08-11T11:41:57.709Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
               "Title": "appsettings.json",
               "DocumentMoniker": "D:\\WhatsappBot\\APIV2\\appsettings.json",
               "RelativeDocumentMoniker": "appsettings.json",
@@ -181,8 +192,7 @@
               "RelativeToolTip": "appsettings.json",
               "ViewState": "AgIAAAYAAAAAAAAAAAAAABgAAAAfAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2026-08-11T11:35:19.73Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-08-11T11:35:19.73Z"
             },
             {
               "$type": "Document",
@@ -194,12 +204,11 @@
               "RelativeToolTip": "Dockerfile",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
-              "WhenOpened": "2026-08-11T11:41:51.84Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-08-11T11:41:51.84Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 7,
               "Title": "AppDbContextFactory.cs",
               "DocumentMoniker": "D:\\WhatsappBot\\APIV2\\Data\\AppDbContextFactory.cs",
               "RelativeDocumentMoniker": "Data\\AppDbContextFactory.cs",
@@ -207,8 +216,7 @@
               "RelativeToolTip": "Data\\AppDbContextFactory.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-08-11T11:38:21.253Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-08-11T11:38:21.253Z"
             },
             {
               "$type": "Document",
@@ -220,8 +228,7 @@
               "RelativeToolTip": "Migrations\\20260811113731_init.cs",
               "ViewState": "AgIAAOYAAAAAAAAAAAAuwAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-08-11T11:37:31.581Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-08-11T11:37:31.581Z"
             }
           ]
         }

@@ -68,5 +68,5 @@ public record WebhookLogDto(int Id, string EventType, bool ProcessedSuccessfully
 public record OAuthRedirectResponse(string AuthUrl);
 public record OAuthCallbackRequest(string Code, string State);
 public record OAuthStatusResponse(bool IsConnected, string? ConnectedAt, string? PhoneNumberId, string? BusinessAccountId);
-public record EmbeddedSignupRequest(string Code, string WabaId, string PhoneNumberId);
+public record EmbeddedSignupRequest(string Code, string? WabaId, string? PhoneNumberId);
 public record EmbeddedSignupResponse(bool Success, string Message, string? PhoneNumberId, string? BusinessAccountId);
