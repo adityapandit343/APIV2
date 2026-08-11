@@ -12,8 +12,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace ChatbotApi.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    [Migration("20260627064213_AddOAuthFields")]
-    partial class AddOAuthFields
+    [Migration("20260811114306_init")]
+    partial class init
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)

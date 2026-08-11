@@ -11,7 +11,7 @@ namespace ChatbotApi.Data
 
             var connectionString =
                 Environment.GetEnvironmentVariable("ConnectionStrings__DefaultConnection")
-                ?? "Server=115.241.58.68,2129;Database=testWB;User Id=sa;Password=Aman!@#4;TrustServerCertificate=True;";
+                ?? "Server=115.241.58.68,2129;Database=apis;User Id=sa;Password=Aman!@#4;TrustServerCertificate=True;";
 
             optionsBuilder.UseSqlServer(connectionString);
 

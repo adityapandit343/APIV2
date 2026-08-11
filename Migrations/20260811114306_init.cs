@@ -6,7 +6,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 namespace ChatbotApi.Migrations
 {
     /// <inheritdoc />
-    public partial class InitialCreate : Migration
+    public partial class init : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -27,7 +27,9 @@ namespace ChatbotApi.Migrations
                     WhatsAppAccessToken = table.Column<string>(type: "nvarchar(512)", maxLength: 512, nullable: true),
                     WhatsAppBusinessAccountId = table.Column<string>(type: "nvarchar(64)", maxLength: 64, nullable: true),
                     FallbackMessage = table.Column<string>(type: "nvarchar(2000)", maxLength: 2000, nullable: false),
-                    HandoffMessage = table.Column<string>(type: "nvarchar(2000)", maxLength: 2000, nullable: false)
+                    HandoffMessage = table.Column<string>(type: "nvarchar(2000)", maxLength: 2000, nullable: false),
+                    OAuthState = table.Column<string>(type: "nvarchar(256)", maxLength: 256, nullable: true),
+                    WhatsAppConnectedAt = table.Column<DateTime>(type: "datetime2", nullable: true)
                 },
                 constraints: table =>
                 {

@@ -45,65 +45,75 @@ public class OAuthController : ControllerBase
                 return BadRequest(new EmbeddedSignupResponse(false, "Authorization code is required", null, null));
             }
 
-            if (string.IsNullOrWhiteSpace(request.WabaId))
-            {
-                _logger.LogWarning("Embedded signup: No WABA ID provided");
-                return BadRequest(new EmbeddedSignupResponse(false, "WhatsApp Business Account ID is required", null, null));
-            }
-
-            if (string.IsNullOrWhiteSpace(request.PhoneNumberId))
-            {
-                _logger.LogWarning("Embedded signup: No phone number ID provided");
-                return BadRequest(new EmbeddedSignupResponse(false, "Phone number ID is required", null, null));
-            }
-
             var tenantId = int.Parse(User.FindFirst(ClaimTypes.NameIdentifier)?.Value ?? "0");
             var tenant = await _db.Tenants.FindAsync(tenantId, ct);
-            
+
             if (tenant == null)
             {
                 _logger.LogWarning("Embedded signup: Tenant not found for ID {TenantId}", tenantId);
                 return NotFound(new EmbeddedSignupResponse(false, "Tenant not found", null, null));
             }
 
-            // Exchange code for access token
+            // 1. Exchange code for access token
             var tokenResult = await _oauthService.ExchangeEmbeddedSignupCodeAsync(request.Code, ct);
-            
-            // Get long-lived token
+
+            // 2. Get long-lived token
             var longLivedToken = await _oauthService.GetLongLivedTokenAsync(tokenResult.AccessToken, ct);
 
-            // Subscribe to webhook
+            string? wabaId = request.WabaId;
+            string? phoneNumberId = request.PhoneNumberId;
+
+            // 3. Fallback: Fetch WABA ID & Phone Number ID if missing from request payload
+            if (string.IsNullOrWhiteSpace(wabaId) || string.IsNullOrWhiteSpace(phoneNumberId))
+            {
+                _logger.LogInformation("Embedded signup: Missing WABA or Phone ID in payload, fetching from Meta Graph API...");
+                var (fetchedWaba, fetchedPhone) = await _oauthService.GetWabaAndPhoneDetailsAsync(longLivedToken, ct);
+
+                wabaId ??= fetchedWaba;
+                phoneNumberId ??= fetchedPhone;
+            }
+
+            if (string.IsNullOrWhiteSpace(wabaId))
+            {
+                return BadRequest(new EmbeddedSignupResponse(false, "Could not retrieve WhatsApp Business Account ID from Meta", null, null));
+            }
+
+            if (string.IsNullOrWhiteSpace(phoneNumberId))
+            {
+                return BadRequest(new EmbeddedSignupResponse(false, "Could not retrieve Phone Number ID from Meta", null, null));
+            }
+
+            // 4. Subscribe to webhook
             var webhookUrl = $"{_config["App:BaseUrl"]}/api/webhooks/whatsapp";
             var verifyToken = _config["WhatsApp:VerifyToken"];
             var webhookSubscribed = await _oauthService.SubscribeToWebhookAsync(
-                request.PhoneNumberId, 
-                longLivedToken, 
-                webhookUrl, 
-                verifyToken ?? "", 
+                phoneNumberId,
+                longLivedToken,
+                webhookUrl,
+                verifyToken ?? "",
                 ct);
 
             if (!webhookSubscribed)
             {
-                _logger.LogWarning("Embedded signup: Webhook subscription failed for phone {PhoneId}", request.PhoneNumberId);
-                // Continue anyway - webhook can be configured manually
+                _logger.LogWarning("Embedded signup: Webhook subscription failed for phone {PhoneId}", phoneNumberId);
             }
 
-            // Update tenant with OAuth data
+            // 5. Update tenant with OAuth data
             tenant.WhatsAppAccessToken = longLivedToken;
-            tenant.WhatsAppPhoneNumberId = request.PhoneNumberId;
-            tenant.WhatsAppBusinessAccountId = request.WabaId;
+            tenant.WhatsAppPhoneNumberId = phoneNumberId;
+            tenant.WhatsAppBusinessAccountId = wabaId;
             tenant.WhatsAppConnectedAt = DateTime.UtcNow;
 
             await _db.SaveChangesAsync(ct);
 
-            _logger.LogInformation("Embedded signup successful for tenant {TenantId}, phone {PhoneId}, WABA {WabaId}", 
-                tenantId, request.PhoneNumberId, request.WabaId);
+            _logger.LogInformation("Embedded signup successful for tenant {TenantId}, phone {PhoneId}, WABA {WabaId}",
+                tenantId, phoneNumberId, wabaId);
 
             return Ok(new EmbeddedSignupResponse(
-                true, 
-                "WhatsApp connected successfully", 
-                request.PhoneNumberId, 
-                request.WabaId
+                true,
+                "WhatsApp connected successfully",
+                phoneNumberId,
+                wabaId
             ));
         }
         catch (Exception ex)

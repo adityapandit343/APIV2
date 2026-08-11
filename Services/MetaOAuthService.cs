@@ -10,6 +10,7 @@ public interface IMetaOAuthService
     Task<OAuthTokenResult> ExchangeEmbeddedSignupCodeAsync(string code, CancellationToken ct = default);
     Task<string> GetLongLivedTokenAsync(string shortLivedToken, CancellationToken ct = default);
     Task<bool> SubscribeToWebhookAsync(string phoneNumberId, string accessToken, string webhookUrl, string verifyToken, CancellationToken ct = default);
+    Task<(string? WabaId, string? PhoneNumberId)> GetWabaAndPhoneDetailsAsync(string accessToken, CancellationToken ct = default);
 }
 
 public record OAuthTokenResult(string AccessToken, string TokenType, int ExpiresIn);
@@ -37,10 +38,6 @@ public class MetaOAuthService : IMetaOAuthService
     private string AppSecret => _config["Meta:AppSecret"] ?? throw new InvalidOperationException("Meta:AppSecret not configured");
     private string GraphApiVersion => _config["Meta:GraphApiVersion"] ?? "v23.0";
 
-    /// <summary>
-    /// Exchange Meta Embedded Signup authorization code for access token.
-    /// Called after user completes Embedded Signup flow on frontend.
-    /// </summary>
     public async Task<OAuthTokenResult> ExchangeEmbeddedSignupCodeAsync(string code, CancellationToken ct = default)
     {
         try
@@ -75,9 +72,6 @@ public class MetaOAuthService : IMetaOAuthService
         }
     }
 
-    /// <summary>
-    /// Exchange short-lived token for long-lived token (60 days validity).
-    /// </summary>
     public async Task<string> GetLongLivedTokenAsync(string shortLivedToken, CancellationToken ct = default)
     {
         try
@@ -94,7 +88,6 @@ public class MetaOAuthService : IMetaOAuthService
             if (!response.IsSuccessStatusCode)
             {
                 _logger.LogWarning("Failed to get long-lived token: {Status} {Content}", response.StatusCode, content);
-                // Return short-lived token if long-lived exchange fails
                 return shortLivedToken;
             }
 
@@ -111,8 +104,56 @@ public class MetaOAuthService : IMetaOAuthService
     }
 
     /// <summary>
-    /// Subscribe phone number to webhook for receiving messages.
+    /// Fallback: Automatically fetches WABA ID and Phone Number ID from Meta Graph API
+    /// if frontend sends them as null.
     /// </summary>
+    public async Task<(string? WabaId, string? PhoneNumberId)> GetWabaAndPhoneDetailsAsync(string accessToken, CancellationToken ct = default)
+    {
+        try
+        {
+            // 1. Get Shared WABA ID
+            var wabaUrl = $"https://graph.facebook.com/{GraphApiVersion}/me/shared_whatsapp_business_accounts?access_token={accessToken}";
+            var wabaRes = await _http.GetAsync(wabaUrl, ct);
+            var wabaContent = await wabaRes.Content.ReadAsStringAsync(ct);
+
+            string? wabaId = null;
+            string? phoneId = null;
+
+            if (wabaRes.IsSuccessStatusCode)
+            {
+                using var doc = JsonDocument.Parse(wabaContent);
+                if (doc.RootElement.TryGetProperty("data", out var dataArray) && dataArray.GetArrayLength() > 0)
+                {
+                    wabaId = dataArray[0].GetProperty("id").GetString();
+                }
+            }
+
+            // 2. Fetch Phone Number ID using WABA ID
+            if (!string.IsNullOrEmpty(wabaId))
+            {
+                var phoneUrl = $"https://graph.facebook.com/{GraphApiVersion}/{wabaId}/phone_numbers?access_token={accessToken}";
+                var phoneRes = await _http.GetAsync(phoneUrl, ct);
+                var phoneContent = await phoneRes.Content.ReadAsStringAsync(ct);
+
+                if (phoneRes.IsSuccessStatusCode)
+                {
+                    using var doc = JsonDocument.Parse(phoneContent);
+                    if (doc.RootElement.TryGetProperty("data", out var phoneArray) && phoneArray.GetArrayLength() > 0)
+                    {
+                        phoneId = phoneArray[0].GetProperty("id").GetString();
+                    }
+                }
+            }
+
+            return (wabaId, phoneId);
+        }
+        catch (Exception ex)
+        {
+            _logger.LogError(ex, "Error fetching WABA or Phone details from Graph API");
+            return (null, null);
+        }
+    }
+
     public async Task<bool> SubscribeToWebhookAsync(string phoneNumberId, string accessToken, string webhookUrl, string verifyToken, CancellationToken ct = default)
     {
         try
