@@ -28,7 +28,7 @@ builder.Services.AddScoped<IQuestionMatchingService, QuestionMatchingService>();
 builder.Services.AddScoped<IMessagePipelineService, MessagePipelineService>();
 builder.Services.AddHttpClient<IWhatsAppCloudService, WhatsAppCloudService>();
 builder.Services.AddHttpClient<IMetaOAuthService, MetaOAuthService>();
-builder.Services.AddHostedService<MessageRetryBackgroundService>();
+//builder.Services.AddHostedService<MessageRetryBackgroundService>();
 
 builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
     .AddJwtBearer(options =>
