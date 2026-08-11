@@ -43,9 +43,10 @@ public class MetaOAuthService : IMetaOAuthService
         try
         {
             var url = $"https://graph.facebook.com/{GraphApiVersion}/oauth/access_token?" +
-                      $"client_id={AppId}&" +
-                      $"client_secret={AppSecret}&" +
-                      $"code={Uri.EscapeDataString(code)}";
+           $"client_id={AppId}&" +
+           $"client_secret={AppSecret}&" +
+           $"code={Uri.EscapeDataString(code)}&" +
+           $"redirect_uri=";
 
             var response = await _http.GetAsync(url, ct);
             var content = await response.Content.ReadAsStringAsync(ct);

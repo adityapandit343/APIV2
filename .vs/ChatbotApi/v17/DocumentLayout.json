@@ -3,16 +3,16 @@
   "WorkspaceRootPath": "D:\\WhatsappBot\\APIV2\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{E820EDFF-16D3-4C11-88B4-B47D00A512AC}|ChatbotApi.csproj|d:\\whatsappbot\\apiv2\\dtos\\dtos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E820EDFF-16D3-4C11-88B4-B47D00A512AC}|ChatbotApi.csproj|solutionrelative:dtos\\dtos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{E820EDFF-16D3-4C11-88B4-B47D00A512AC}|ChatbotApi.csproj|d:\\whatsappbot\\apiv2\\services\\metaoauthservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E820EDFF-16D3-4C11-88B4-B47D00A512AC}|ChatbotApi.csproj|solutionrelative:services\\metaoauthservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{E820EDFF-16D3-4C11-88B4-B47D00A512AC}|ChatbotApi.csproj|d:\\whatsappbot\\apiv2\\controllers\\oauthcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{E820EDFF-16D3-4C11-88B4-B47D00A512AC}|ChatbotApi.csproj|solutionrelative:controllers\\oauthcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E820EDFF-16D3-4C11-88B4-B47D00A512AC}|ChatbotApi.csproj|d:\\whatsappbot\\apiv2\\services\\metaoauthservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E820EDFF-16D3-4C11-88B4-B47D00A512AC}|ChatbotApi.csproj|solutionrelative:services\\metaoauthservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{E820EDFF-16D3-4C11-88B4-B47D00A512AC}|ChatbotApi.csproj|d:\\whatsappbot\\apiv2\\dtos\\dtos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E820EDFF-16D3-4C11-88B4-B47D00A512AC}|ChatbotApi.csproj|solutionrelative:dtos\\dtos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{E820EDFF-16D3-4C11-88B4-B47D00A512AC}|ChatbotApi.csproj|d:\\whatsappbot\\apiv2\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -58,21 +58,8 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 7,
           "Children": [
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Dtos.cs",
-              "DocumentMoniker": "D:\\WhatsappBot\\APIV2\\DTOs\\Dtos.cs",
-              "RelativeDocumentMoniker": "DTOs\\Dtos.cs",
-              "ToolTip": "D:\\WhatsappBot\\APIV2\\DTOs\\Dtos.cs",
-              "RelativeToolTip": "DTOs\\Dtos.cs",
-              "ViewState": "AgIAACYAAAAAAAAAAAAgwEgAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-08-11T14:14:08.95Z",
-              "EditorCaption": ""
-            },
             {
               "$type": "Bookmark",
               "Name": "ST:1448495824:0:{83107a3e-496a-485e-b455-16ddb978e55e}"
@@ -100,14 +87,28 @@
             {
               "$type": "Document",
               "DocumentIndex": 2,
+              "Title": "Dtos.cs",
+              "DocumentMoniker": "D:\\WhatsappBot\\APIV2\\DTOs\\Dtos.cs",
+              "RelativeDocumentMoniker": "DTOs\\Dtos.cs",
+              "ToolTip": "D:\\WhatsappBot\\APIV2\\DTOs\\Dtos.cs",
+              "RelativeToolTip": "DTOs\\Dtos.cs",
+              "ViewState": "AgIAACYAAAAAAAAAAAAgwEgAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-11T14:14:08.95Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
               "Title": "MetaOAuthService.cs",
               "DocumentMoniker": "D:\\WhatsappBot\\APIV2\\Services\\MetaOAuthService.cs",
               "RelativeDocumentMoniker": "Services\\MetaOAuthService.cs",
               "ToolTip": "D:\\WhatsappBot\\APIV2\\Services\\MetaOAuthService.cs",
               "RelativeToolTip": "Services\\MetaOAuthService.cs",
-              "ViewState": "AgIAAJAAAAAAAAAAAAAQwL8AAAABAAAAAAAAAA==",
+              "ViewState": "AgIAAJEAAAAAAAAAAAAQwMAAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-08-11T13:56:09.274Z"
+              "WhenOpened": "2026-08-11T13:56:09.274Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -141,7 +142,7 @@
               "RelativeDocumentMoniker": "Controllers\\OAuthController.cs",
               "ToolTip": "D:\\WhatsappBot\\APIV2\\Controllers\\OAuthController.cs",
               "RelativeToolTip": "Controllers\\OAuthController.cs",
-              "ViewState": "AgIAABgAAAAAAAAAAAAAACQAAAAoAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAmAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-08-11T12:45:31.036Z",
               "EditorCaption": ""
