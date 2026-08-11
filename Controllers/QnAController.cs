@@ -98,6 +98,7 @@ public class QnAController : ControllerBase
         if (match != null)
             return Ok(new ChatPreviewResponse(match.Answer, true));
 
-        return Ok(new ChatPreviewResponse(null, false));
+        var tenant = await _db.Tenants.FindAsync(CurrentTenantId);
+        return Ok(new ChatPreviewResponse(tenant?.FallbackMessage, false));
     }
 }
