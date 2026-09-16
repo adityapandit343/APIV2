@@ -51,11 +51,12 @@ builder.Services.AddControllers();
 
 builder.Services.AddCors(options =>
 {
-    options.AddPolicy("AllowAll", policy =>
+    options.AddPolicy("AllowFrontend", policy =>
     {
-        policy.AllowAnyOrigin()
-              .AllowAnyHeader()
-              .AllowAnyMethod();
+        policy
+            .WithOrigins("https://apka-nai-ui.vercel.app")
+            .AllowAnyHeader()
+            .AllowAnyMethod();
     });
 });
 
@@ -91,7 +92,7 @@ var app = builder.Build();
     app.UseSwaggerUI();
 
 
-app.UseCors("AllowAll");
+app.UseCors("AllowFrontend");
 app.UseAuthentication();
 app.UseAuthorization();
 app.MapControllers();
